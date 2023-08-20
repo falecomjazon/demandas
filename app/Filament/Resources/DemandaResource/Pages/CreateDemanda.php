@@ -9,4 +9,12 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateDemanda extends CreateRecord
 {
     protected static string $resource = DemandaResource::class;
+
+     /**
+     * rediciona para a listagem 
+     */  
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }
